@@ -8,21 +8,22 @@
   "description": "Million Stable Coin (MSTBL) - A Cosmos SDK-based blockchain for a stable coin. Built on CosmWasm with CW20 contract for token management.",
   "website": "",
   "documentation": "README.md",
-  "repository": "https://github.com/chainapsis/keplr-chain-registry",
+  "repository": "https://github.com/rh050/MSTBL-Blockchain",
+  "website": "https://mstbl.com",
   "logo_URIs": {
-    "png": "",
+    "png": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/frontend/public/MSTBL_LOGO.png",
     "svg": ""
   },
   "apis": {
     "rpc": [
       {
-        "address": "http://34.57.32.80:26657",
+        "address": "https://rpc.stbl.mstbl.com",
         "provider": "MSTBL"
       }
     ],
     "rest": [
       {
-        "address": "http://34.57.32.80:1317",
+        "address": "https://api.stbl.mstbl.com",
         "provider": "MSTBL"
       }
     ],
