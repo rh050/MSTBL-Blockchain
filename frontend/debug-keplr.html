@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Debug MSTBL Keplr Configuration</title>
+</head>
+
+<body>
+  <h1>Debug MSTBL Keplr Configuration</h1>
+  <div id="results"></div>
+
+  <script>
+    const results = document.getElementById('results');
+
+    function log(message) {
+      results.innerHTML += '<p>' + message + '</p>';
+      console.log(message);
+    }
+
+    // Test what configuration the live site is actually using
+    log('=== Debugging MSTBL Keplr Configuration ===');
+
+    // Check if we can access process.env (won't work in browser, but let's see)
+    log('process.env available: ' + (typeof process !== 'undefined'));
+
+    // Check if there are any global config variables
+    log('window.ENV: ' + JSON.stringify(window.ENV || 'undefined'));
+    log('window.__ENV: ' + JSON.stringify(window.__ENV || 'undefined'));
+
+    // Try to mimic the getEnvVar function from our code
+    function getEnvVar(key, defaultValue) {
+      return process.env[key] || defaultValue;
+    }
+
+    let chainConfig;
+    try {
+      chainConfig = {
+        chainId: getEnvVar('NEXT_PUBLIC_CHAIN_ID', 'mstbl-1'),
+        chainName: 'MSTBL Network',
+        rpc: getEnvVar('NEXT_PUBLIC_RPC_ENDPOINT', 'https://rpc.stbl.mstbl.com'),
+        rest: getEnvVar('NEXT_PUBLIC_REST_ENDPOINT', 'https://api.stbl.mstbl.com'),
+        bech32Config: {
+          bech32PrefixAccAddr: getEnvVar('NEXT_PUBLIC_BECH32_PREFIX', 'wasm'),
+          bech32PrefixAccPub: getEnvVar('NEXT_PUBLIC_BECH32_PREFIX', 'wasm') + 'pub',
+          bech32PrefixValAddr: getEnvVar('NEXT_PUBLIC_BECH32_PREFIX', 'wasm') + 'valoper',
+          bech32PrefixValPub: getEnvVar('NEXT_PUBLIC_BECH32_PREFIX', 'wasm') + 'valoperpub',
+          bech32PrefixConsAddr: getEnvVar('NEXT_PUBLIC_BECH32_PREFIX', 'wasm') + 'valcons',
+          bech32PrefixConsPub: getEnvVar('NEXT_PUBLIC_BECH32_PREFIX', 'wasm') + 'valconspub',
+        },
+        currencies: [
+          {
+            coinDenom: 'STAKE',
+            coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'stake'),
+            coinDecimals: 6,
+          }
+        ],
+        feeCurrencies: [
+          {
+            coinDenom: 'STAKE',
+            coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'stake'),
+            coinDecimals: 6,
+            gasPriceStep: {
+              low: 0.01,
+              average: 0.025,
+              high: 0.04,
+            },
+          }
+        ],
+        stakeCurrency: {
+          coinDenom: 'STAKE',
+          coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'stake'),
+          coinDecimals: 6,
+        },
+        coinType: 118,
+      };
+
+      log('Generated chain config: ' + JSON.stringify(chainConfig, null, 2));
+      log('Bech32 Prefix being used: ' + chainConfig.bech32Config.bech32PrefixAccAddr);
+
+    } catch (error) {
+      log('Error creating config: ' + error.message);
+    }
+
+    // Check what the blockchain actually expects
+    fetch('https://api.stbl.mstbl.com/cosmos/bank/v1beta1/balances/wasm1re0pq3tyrtfen6mmjzdtpays46ssp7kdx3vptp')
+      .then(response => {
+        log('Blockchain accepts wasm prefix: ' + (response.ok ? 'YES' : 'NO'));
+        return response.json();
+      })
+      .then(data => {
+        log('Blockchain response: ' + JSON.stringify(data));
+      })
+      .catch(err => {
+        log('Blockchain test error: ' + err.message);
+      });
+
+    // Test stbl prefix (should fail)
+    fetch('https://api.stbl.mstbl.com/cosmos/bank/v1beta1/balances/stbl1re0pq3tyrtfen6mmjzdtpays46ssp7kdx3vptp')
+      .then(response => {
+        log('Blockchain accepts stbl prefix: ' + (response.ok ? 'YES' : 'NO'));
+        if (!response.ok) {
+          return response.text();
+        }
+        return response.json();
+      })
+      .then(data => {
+        log('Blockchain stbl test response: ' + JSON.stringify(data));
+      })
+      .catch(err => {
+        log('Blockchain stbl test error: ' + err.message);
+      });
+  </script>
+</body>
+
+</html>

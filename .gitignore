@@ -1,0 +1,98 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production builds
+**/build/
+**/dist/
+**/.next/
+**/out/
+
+# Environment files
+.env
+.env.local
+.env.production.local
+.env.development.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Database files
+*.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# PowerShell scripts (exclude)
+*.ps1
+
+# Test files
+*test*
+*spec*
+
+# Backup files
+*backup*
+*old*
+*orig*
+
+# Binary files (keep essential ones)
+*.exe
+!stbld.exe
+
+# Genesis files (keep main ones)
+*genesis*.json
+!genesis_shared.json
+!stbl_genesis.json
+!ustbl_genesis.json
+
+# Config backups
+val*_config.toml
+
+# Multi-validator setup (temporary)
+multi_val_setup/
+stbl-val*/
+
+# Mock binaries
+mock-stbld/
+
+# Development environments
+stbl-chain/
+stbl-real/
+stbl-network-*/
+
+# Documentation (keep main docs)
+*.md
+!README.md
+!CODEOWNERS
+!LICENSE
+
+# Scripts (keep important ones)
+*.sh
+!create_*.sh
+!setup_*.sh

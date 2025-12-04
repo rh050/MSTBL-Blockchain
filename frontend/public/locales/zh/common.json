@@ -1,0 +1,88 @@
+{
+  "title": "MSTBL - 百万稳定币",
+  "subtitle": "稳定数字货币的未来",
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "tokenomics": "代币经济学",
+    "roadmap": "路线图",
+    "community": "社区"
+  },
+  "hero": {
+    "title": "百万稳定币",
+    "subtitle": "基于Cosmos的革命性稳定币，具有渐进式销售机制",
+    "description": "加入MSTBL的去中心化金融未来 - 基于Cosmos SDK构建的完全抵押稳定币，具有多重签名安全性和透明治理。",
+    "cta": {
+      "primary": "购买MSTBL",
+      "secondary": "了解更多"
+    }
+  },
+  "stats": {
+    "totalSupply": "总供应量",
+    "currentStage": "当前阶段",
+    "tokensRemaining": "剩余代币",
+    "nextPrice": "下阶段价格"
+  },
+  "status": {
+    "readyToPurchase": "准备购买 - 区块链活跃"
+  },
+  "purchase": {
+    "title": "购买MSTBL代币",
+    "currentPrice": "当前价格",
+    "enterAmount": "输入USDC金额",
+    "youReceive": "您将收到",
+    "connectWallet": "连接钱包",
+    "buy": "购买MSTBL",
+    "processing": "处理中...",
+    "success": "购买成功！",
+    "error": "购买失败",
+    "scarcityWarning": "仅有100万代币可售 - 无法创造更多！",
+    "scarcityReminder": "请记住：仅有100万代币永久存在！",
+    "scarcityDetails": "无法创造更多 | 价格只会上涨 | 先到先得",
+    "description": "加入我们的渐进式销售，迎接稳定数字货币的未来"
+  },
+  "features": {
+    "title": "为什么选择MSTBL？",
+    "stability": {
+      "title": "价格稳定性",
+      "description": "由USDC储备支持的渐进价值稳定资产（$1→$10→$100→$1000）"
+    },
+    "security": {
+      "title": "多重签名安全",
+      "description": "2/2多重签名保护 - 任何单一实体都无法独自转移资金"
+    },
+    "transparency": {
+      "title": "完全透明",
+      "description": "每笔交易都在链上，通过浏览器实时可见"
+    },
+    "governance": {
+      "title": "社区治理",
+      "description": "未来对协议更新和财库行动进行投票"
+    }
+  },
+  "tokenomics": {
+    "title": "代币经济学概述",
+    "description": "100万MSTBL的有限供应确保长期稀缺性和价值增长。",
+    "allocation": {
+      "reserve": "储备钱包：1,000,000 MSTBL（100%）- 公开销售（4个阶段）",
+      "marketing": "营销：0 MSTBL（0%）- 无营销分配",
+      "treasury": "财库：0 MSTBL（0%）- 治理和未来扩展"
+    },
+    "stages": {
+      "title": "渐进式销售阶段",
+      "stage1": "阶段1：250,000 MSTBL $1.00 - 🟢 活跃",
+      "stage2": "阶段2：250,000 MSTBL $10.00 - 🔜 即将到来",
+      "stage3": "阶段3：250,000 MSTBL $100.00 - 🔜 即将到来",
+      "stage4": "阶段4：250,000 MSTBL $1000.00 - 🔜 即将到来",
+      "trigger": "当售出250,000 MSTBL时，下一阶段解锁"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 MSTBL. 保留所有权利。",
+    "links": {
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "contact": "联系我们"
+    }
+  }
+}

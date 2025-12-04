@@ -1,0 +1,88 @@
+{
+  "title": "MSTBL - Million Stable Coin",
+  "subtitle": "Die Zukunft der stabilen digitalen Währung",
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roadmap",
+    "community": "Gemeinschaft"
+  },
+  "hero": {
+    "title": "Million Stable Coin",
+    "subtitle": "Revolutionäre Cosmos-basierte Stable Coin mit progressiver Verkaufsmechanik",
+    "description": "Treten Sie der Zukunft der dezentralen Finanzierung mit MSTBL bei - einer vollständig besicherten Stable Coin auf Cosmos SDK mit Multi-Signatur-Sicherheit und transparenter Governance.",
+    "cta": {
+      "primary": "MSTBL kaufen",
+      "secondary": "Mehr erfahren"
+    }
+  },
+  "stats": {
+    "totalSupply": "Gesamtangebot",
+    "currentStage": "Aktuelle Stufe",
+    "tokensRemaining": "Verbleibende Tokens",
+    "nextPrice": "Nächster Stufenpreis"
+  },
+  "status": {
+    "readyToPurchase": "Bereit zum Kauf - Blockchain aktiv"
+  },
+  "purchase": {
+    "title": "MSTBL Tokens kaufen",
+    "currentPrice": "Aktueller Preis",
+    "enterAmount": "USDC Betrag eingeben",
+    "youReceive": "Sie erhalten",
+    "connectWallet": "Wallet verbinden",
+    "buy": "MSTBL kaufen",
+    "processing": "Verarbeitung...",
+    "success": "Kauf erfolgreich!",
+    "error": "Kauf fehlgeschlagen",
+    "scarcityWarning": "Nur 1.000.000 Token zum Verkauf - keine weiteren können erstellt werden!",
+    "scarcityReminder": "Denken Sie daran: Nur 1.000.000 Token existieren für immer!",
+    "scarcityDetails": "Keine weiteren können erstellt werden | Preise steigen nur | Wer zuerst kommt, mahlt zuerst",
+    "description": "Treten Sie der Zukunft der stabilen digitalen Währung mit unserem progressiven Verkauf bei"
+  },
+  "features": {
+    "title": "Warum MSTBL wählen?",
+    "stability": {
+      "title": "Preisstabilität",
+      "description": "Progressiver stabiler Vermögenswert unterstützt von USDC-Reserven ($1→$10→$100→$1000)"
+    },
+    "security": {
+      "title": "Multi-Signatur-Sicherheit",
+      "description": "2/2 Multi-Sig-Schutz - keine einzelne Entität kann Gelder allein bewegen"
+    },
+    "transparency": {
+      "title": "Vollständige Transparenz",
+      "description": "Jede Transaktion on-chain, in Echtzeit über Explorer einsehbar"
+    },
+    "governance": {
+      "title": "Community Governance",
+      "description": "Zukünftige Abstimmung über Protokoll-Updates und Treasury-Aktionen"
+    }
+  },
+  "tokenomics": {
+    "title": "Tokenomics Überblick",
+    "description": "Ein begrenztes Angebot von 1 Million MSTBL gewährleistet langfristige Knappheit und Wertsteigerung.",
+    "allocation": {
+      "reserve": "Reserve Wallet: 1,000,000 MSTBL (100%) - Öffentlicher Verkauf (4 Stufen)",
+      "marketing": "Marketing: 0 MSTBL (0%) - Keine Marketing-Zuteilung",
+      "treasury": "Treasury: 0 MSTBL (0%) - Governance & zukünftige Expansion"
+    },
+    "stages": {
+      "title": "Progressive Verkaufsstufen",
+      "stage1": "Stufe 1: 250,000 MSTBL bei $1.00 - 🟢 Aktiv",
+      "stage2": "Stufe 2: 250,000 MSTBL bei $10.00 - 🔜 Bevorstehend",
+      "stage3": "Stufe 3: 250,000 MSTBL bei $100.00 - 🔜 Bevorstehend",
+      "stage4": "Stufe 4: 250,000 MSTBL bei $1000.00 - 🔜 Bevorstehend",
+      "trigger": "Die nächste Stufe wird freigeschaltet, wenn 250,000 MSTBL verkauft sind"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 MSTBL. Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "contact": "Kontakt"
+    }
+  }
+}
