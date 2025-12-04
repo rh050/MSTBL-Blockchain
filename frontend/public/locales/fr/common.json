@@ -23,9 +23,6 @@
     "tokensRemaining": "Tokens Restants",
     "nextPrice": "Prix Étape Suivante"
   },
-  "status": {
-    "readyToPurchase": "Prêt à acheter - Blockchain active"
-  },
   "purchase": {
     "title": "Acheter des Tokens MSTBL",
     "currentPrice": "Prix Actuel",
@@ -126,5 +123,39 @@
       "terms": "Conditions de Service",
       "contact": "Nous Contacter"
     }
+  },
+  "walletInfo": {
+    "title": "💎 Informations de Votre Portefeuille",
+    "description": "Voir les composants de votre portefeuille - Native MSTBL et CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 Ajouter des Tokens CW20 MSTBL à Keplr",
+    "description": "Pour voir votre solde de tokens CW20 MSTBL dans votre portefeuille Keplr",
+    "autoAddButton": "⚡ Ajouter Automatiquement le Token à Keplr",
+    "manualInstructions": "📝 Instructions d'Ajout Manuel:",
+    "step1": "Ouvrez Keplr et cliquez sur \"Manage Token List\"",
+    "step2": "Cliquez sur \"Add Token\" ou \"+\"",
+    "step3": "Remplissez les détails suivants:",
+    "step4": "Cliquez sur \"Add\" ou \"Submit\" pour terminer",
+    "importantNote": "⚠️ Important: Après l'ajout du token, vous devrez peut-être attendre quelques minutes pour que le solde apparaisse dans le portefeuille. Si le solde n'apparaît pas, essayez de rafraîchir Keplr.",
+    "alerts": {
+      "connectFirst": "Veuillez d'abord vous connecter à Keplr",
+      "success": "✅ Token CW20 MSTBL ajouté avec succès à Keplr!",
+      "connectionIssue": "🔌 Problème de connexion Keplr. Veuillez vous assurer que l'extension est active et réessayer.\n\nLes instructions d'ajout manuel seront maintenant affichées.",
+      "notSupported": "📋 Votre version de Keplr ne prend pas en charge l'ajout automatique.\n\nLes instructions d'ajout manuel seront maintenant affichées.",
+      "failed": "⚠️ Échec de l'ajout automatique du token.\n\nLes instructions d'ajout manuel seront maintenant affichées.",
+      "copied": "✅ Copié dans le presse-papiers: "
+    },
+    "usefulInfo": {
+      "title": "💡 Informations Utiles:",
+      "nativeToken": "Native MSTBL - Apparaît automatiquement et est utilisé pour les frais de transaction",
+      "cw20Token": "CW20 MSTBL - Les tokens principaux, nécessitent une ajout manuel",
+      "bothImportant": "Les deux types de tokens sont importants pour utiliser le système"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 Prix de l'Étape Actuelle - Pour un Temps Limité!",
+    "scarcityAlert": "🔥 Seulement 1,000,000 tokens MSTBL existent - Impossible d'en créer plus!"
   }
 }

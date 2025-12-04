@@ -38,14 +38,19 @@ export default function DebugPage() {
         currencies: [
           {
             coinDenom: 'STAKE',
-            coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'stake'),
+            coinMinimalDenom: 'stake',
+            coinDecimals: 0,
+          },
+          {
+            coinDenom: 'MSTBL',
+            coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'mstbl'),
             coinDecimals: 6,
           }
         ],
         feeCurrencies: [
           {
-            coinDenom: 'STAKE',
-            coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'stake'),
+            coinDenom: 'MSTBL',
+            coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'mstbl'),
             coinDecimals: 6,
             gasPriceStep: {
               low: 0.01,
@@ -56,8 +61,8 @@ export default function DebugPage() {
         ],
         stakeCurrency: {
           coinDenom: 'STAKE',
-          coinMinimalDenom: getEnvVar('NEXT_PUBLIC_COIN_DENOM', 'stake'),
-          coinDecimals: 6,
+          coinMinimalDenom: 'stake',
+          coinDecimals: 0,
         },
         coinType: 118,
       };

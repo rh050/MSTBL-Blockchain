@@ -47,13 +47,15 @@ export interface ChainInfo {
   };
   currencies: Currency[];
   feeCurrencies: Currency[];
-  stakeCurrency: Currency;
+  stakeCurrency?: Currency;
   coinType: number;
   gasPriceStep?: {
     low: number;
     average: number;
     high: number;
   };
+  beta?: boolean;
+  features?: string[];
 }
 
 export interface Currency {

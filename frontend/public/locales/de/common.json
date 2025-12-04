@@ -84,5 +84,39 @@
       "terms": "Nutzungsbedingungen",
       "contact": "Kontakt"
     }
+  },
+  "walletInfo": {
+    "title": "💎 Ihre Wallet-Informationen",
+    "description": "Sehen Sie Ihre Wallet-Komponenten - Native MSTBL und CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 CW20 MSTBL Token zu Keplr hinzufügen",
+    "description": "Um Ihren CW20 MSTBL Token-Saldo in Ihrer Keplr Wallet anzuzeigen",
+    "autoAddButton": "⚡ Token automatisch zu Keplr hinzufügen",
+    "manualInstructions": "📝 Manuelle Hinzufügungsanleitung:",
+    "step1": "Öffnen Sie Keplr und klicken Sie auf \\"Manage Token List\\"",
+    "step2": "Klicken Sie auf \\"Add Token\\" oder \\"+\\"",
+    "step3": "Füllen Sie die folgenden Details aus:",
+    "step4": "Klicken Sie auf \\"Add\\" oder \\"Submit\\" zum Abschließen",
+    "importantNote": "⚠️ Wichtig: Nach dem Hinzufügen des Tokens müssen Sie möglicherweise einige Minuten warten, bis der Saldo in der Wallet angezeigt wird. Wenn der Saldo nicht angezeigt wird, versuchen Sie, Keplr zu aktualisieren.",
+    "alerts": {
+      "connectFirst": "Bitte verbinden Sie sich zuerst mit Keplr",
+      "success": "✅ CW20 MSTBL Token erfolgreich zu Keplr hinzugefügt!",
+      "connectionIssue": "🔌 Keplr-Verbindungsproblem. Bitte stellen Sie sicher, dass die Erweiterung aktiv ist und versuchen Sie es erneut.\\n\\nDie manuelle Hinzufügungsanleitung wird jetzt angezeigt.",
+      "notSupported": "📋 Ihre Keplr-Version unterstützt keine automatische Hinzufügung.\\n\\nDie manuelle Hinzufügungsanleitung wird jetzt angezeigt.",
+      "failed": "⚠️ Token konnte nicht automatisch hinzugefügt werden.\\n\\nDie manuelle Hinzufügungsanleitung wird jetzt angezeigt.",
+      "copied": "✅ In die Zwischenablage kopiert: "
+    },
+    "usefulInfo": {
+      "title": "💡 Nützliche Informationen:",
+      "nativeToken": "Native MSTBL - Erscheint automatisch und wird für Transaktionsgebühren verwendet",
+      "cw20Token": "CW20 MSTBL - Die Haupttoken, erfordern manuelle Hinzufügung",
+      "bothImportant": "Beide Token-Typen sind wichtig für die Nutzung des Systems"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 Aktueller Stufen-Preis - Zeitlich begrenzt!",
+    "scarcityAlert": "🔥 Nur 1,000,000 MSTBL Token existieren - Keine weiteren können erstellt werden!"
   }
 }

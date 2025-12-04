@@ -84,5 +84,39 @@
       "terms": "利用規約",
       "contact": "お問い合わせ"
     }
+  },
+  "walletInfo": {
+    "title": "💎 あなたのウォレット情報",
+    "description": "ウォレットのコンポーネントを表示 - Native MSTBL と CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 CW20 MSTBL トークンをKeplrに追加",
+    "description": "Keplrウォレットでcw20 MSTBLトークンの残高を表示するために",
+    "autoAddButton": "⚡ Keplrに自動的にトークンを追加",
+    "manualInstructions": "📝 手動追加手順:",
+    "step1": "Keplrを開き、\\"Manage Token List\\"をクリック",
+    "step2": "\\"Add Token\\"または\\"+\\"をクリック",
+    "step3": "以下の詳細を入力:",
+    "step4": "\\"Add\\"または\\"Submit\\"をクリックして完了",
+    "importantNote": "⚠️ 重要: トークンを追加した後、残高がウォレットに表示されるまで数分待つ必要がある場合があります。残高が表示されない場合は、Keplrを更新してみてください。",
+    "alerts": {
+      "connectFirst": "最初にKeplrに接続してください",
+      "success": "✅ CW20 MSTBLトークンがKeplrに正常に追加されました！",
+      "connectionIssue": "🔌 Keplr接続の問題。拡張機能がアクティブであることを確認し、再試行してください。\\n\\n手動追加手順が表示されます。",
+      "notSupported": "📋 お使いのKeplrバージョンは自動追加をサポートしていません。\\n\\n手動追加手順が表示されます。",
+      "failed": "⚠️ トークンを自動的に追加できませんでした。\\n\\n手動追加手順が表示されます。",
+      "copied": "✅ クリップボードにコピーされました: "
+    },
+    "usefulInfo": {
+      "title": "💡 役立つ情報:",
+      "nativeToken": "Native MSTBL - 自動的に表示され、取引手数料に使用されます",
+      "cw20Token": "CW20 MSTBL - メイントークン、手動での追加が必要です",
+      "bothImportant": "両方のトークンタイプはシステムを使用するために重要です"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 現在のステージ価格 - 期間限定！",
+    "scarcityAlert": "🔥 1,000,000 MSTBLトークンのみ存在 - これ以上作成できません！"
   }
 }

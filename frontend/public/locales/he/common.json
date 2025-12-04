@@ -124,5 +124,38 @@
       "terms": "תנאי שירות",
       "contact": "צור קשר"
     }
+  },
+  "walletInfo": {
+    "title": "💎 מידע על הארנק שלך",
+    "description": "צפה ברכיבי הארנק שלך - Native MSTBL ו-CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 הוספת טוקני CW20 MSTBL ל-Keplr",
+    "description": "כדי לראות את יתרת טוקני CW20 MSTBL בארנק Keplr שלך",
+    "autoAddButton": "⚡ הוסף טוקן אוטומטית ל-Keplr",
+    "manualInstructions": "📝 הוראות הוספה ידנית:",
+    "step1": "פתח את Keplr ולחץ על \"Manage Token List\"",
+    "step2": "לחץ על \"Add Token\" או \"+\"",
+    "step3": "מלא את הפרטים הבאים:",
+    "step4": "לחץ על \"Add\" או \"Submit\" לסיום",
+    "importantNote": "⚠️ חשוב: לאחר הוספת הטוקן, ייתכן שתצטרך לחכות כמה דקות עד שהיתרה תופיע בארנק. אם היתרה לא מופיעה, נסה לרענן את Keplr.",
+    "alerts": {
+      "connectFirst": "אנא התחבר קודם ל-Keplr",
+      "success": "✅ טוכן CW20 MSTBL נוסף בהצלחה ל-Keplr!",
+      "connectionIssue": "🔌 בעיית חיבור ל-Keplr. אנא וודא שהתוסף פעיל ונסה שוב.\n\nיוצג עכשיו המדריך להוספה ידנית.",
+      "notSupported": "📋 הגרסה של Keplr לא תומכת בהוספה אוטומטית.\n\nיוצג עכשיו המדריך להוספה ידנית.",
+      "failed": "⚠️ לא הצלחתי להוסיף את הטוכן אוטומטית.\n\nיוצג עכשיו המדריך להוספה ידנית.",
+      "copied": "✅ הועתק ללוח: "
+    },
+    "usefulInfo": {
+      "title": "💡 מידע שימושי:",
+      "nativeToken": "Native MSTBL - מופיע אוטומטיטית ומשמש לתשלום עמלות",
+      "cw20Token": "CW20 MSTBL - הטוקנים הראשיים, דורשים הוספה ידנית",
+      "bothImportant": "שני סוגי הטוכנים חשובים לשימוש במערכת"
+    }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 מחיר השלב הנוכחי - לזמן מוגבל!",
+    "scarcityAlert": "🔥 רק 1,000,000 טוקני MSTBL קיימים - אי אפשר ליצור עוד!"
   }
 }

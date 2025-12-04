@@ -127,5 +127,39 @@
       "terms": "Termos de Serviço",
       "contact": "Entre em Contato"
     }
+  },
+  "walletInfo": {
+    "title": "💎 Informações da Sua Carteira",
+    "description": "Visualize os componentes da sua carteira - Native MSTBL e CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 Adicionar Tokens CW20 MSTBL ao Keplr",
+    "description": "Para visualizar o saldo dos seus tokens CW20 MSTBL na sua carteira Keplr",
+    "autoAddButton": "⚡ Adicionar Token Automaticamente ao Keplr",
+    "manualInstructions": "📝 Instruções de Adição Manual:",
+    "step1": "Abra o Keplr e clique em \\"Manage Token List\\"",
+    "step2": "Clique em \\"Add Token\\" ou \\"+\\"",
+    "step3": "Preencha os seguintes detalhes:",
+    "step4": "Clique em \\"Add\\" ou \\"Submit\\" para concluir",
+    "importantNote": "⚠️ Importante: Após adicionar o token, você pode precisar esperar alguns minutos para que o saldo apareça na carteira. Se o saldo não aparecer, tente atualizar o Keplr.",
+    "alerts": {
+      "connectFirst": "Por favor, conecte-se ao Keplr primeiro",
+      "success": "✅ Token CW20 MSTBL adicionado com successo ao Keplr!",
+      "connectionIssue": "🔌 Problema de conexão com Keplr. Por favor, certifique-se de que a extensão está ativa e tente novamente.\\n\\nAs instruções de adição manual serão exibidas agora.",
+      "notSupported": "📋 Sua versão do Keplr não suporta adição automática.\\n\\nAs instruções de adição manual serão exibidas agora.",
+      "failed": "⚠️ Falha ao adicionar token automaticamente.\\n\\nAs instruções de adição manual serão exibidas agora.",
+      "copied": "✅ Copiado para a área de transferência: "
+    },
+    "usefulInfo": {
+      "title": "💡 Informações Úteis:",
+      "nativeToken": "Native MSTBL - Aparece automaticamente e é usado para taxas de transação",
+      "cw20Token": "CW20 MSTBL - Os tokens principais, requerem adição manual",
+      "bothImportant": "Ambos os tipos de token são importantes para usar o sistema"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 Preço da Fase Atual - Por Tempo Limitado!",
+    "scarcityAlert": "🔥 Apenas 1,000,000 tokens MSTBL existem - Não é possível criar mais!"
   }
 }

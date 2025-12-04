@@ -1,0 +1,25 @@
+rpc.stbl.mstbl.com {
+    reverse_proxy localhost:26657
+}
+
+api.stbl.mstbl.com {
+    @oldpath path /wasm/v1/*
+    handle @oldpath {
+        rewrite * /cosmwasm{uri}
+        reverse_proxy localhost:1317
+    }
+
+    reverse_proxy localhost:1317
+}
+
+mstbl.com {
+    reverse_proxy https://mstbl-prod-v1-329336973316.us-central1.run.app {
+        header_up Host {upstream_hostport}
+    }
+}
+
+app.stbl.mstbl.com {
+    reverse_proxy https://mstbl-prod-v1-329336973316.us-central1.run.app {
+        header_up Host {upstream_hostport}
+    }
+}

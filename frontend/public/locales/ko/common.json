@@ -127,5 +127,39 @@
       "terms": "서비스 약관",
       "contact": "문의하기"
     }
+  },
+  "walletInfo": {
+    "title": "💎 지갑 정보",
+    "description": "지갑 구성 요소 보기 - Native MSTBL 및 CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 Keplr에 CW20 MSTBL 토큰 추가",
+    "description": "Keplr 지갑에서 CW20 MSTBL 토큰 잔액을 보려면",
+    "autoAddButton": "⚡ Keplr에 자동으로 토큰 추가",
+    "manualInstructions": "📝 수동 추가 지침:",
+    "step1": "Keplr을 열고 \\"Manage Token List\\"를 클릭하세요",
+    "step2": "\\"Add Token\\" 또는 \\"+\\"를 클릭하세요",
+    "step3": "다음 세부 정보를 입력하세요:",
+    "step4": "\\"Add\\" 또는 \\"Submit\\"을 클릭하여 완료하세요",
+    "importantNote": "⚠️ 중요: 토큰을 추가한 후 잔액이 지갑에 표시되기까지 몇 분 정도 기다려야 할 수 있습니다. 잔액이 표시되지 않으면 Keplr을 새로고침해 보세요.",
+    "alerts": {
+      "connectFirst": "먼저 Keplr에 연결하세요",
+      "success": "✅ CW20 MSTBL 토큰이 Keplr에 성공적으로 추가되었습니다!",
+      "connectionIssue": "🔌 Keplr 연결 문제. 확장 프로그램이 활성화되어 있는지 확인하고 다시 시도하세요.\\n\\n수동 추가 지침이 표시됩니다.",
+      "notSupported": "📋 사용 중인 Keplr 버전은 자동 추가를 지원하지 않습니다.\\n\\n수동 추가 지침이 표시됩니다.",
+      "failed": "⚠️ 토큰을 자동으로 추가하지 못했습니다.\\n\\n수동 추가 지침이 표시됩니다.",
+      "copied": "✅ 클립보드에 복사됨: "
+    },
+    "usefulInfo": {
+      "title": "💡 유용한 정보:",
+      "nativeToken": "Native MSTBL - 자동으로 나타나며 거래 수수료에 사용됩니다",
+      "cw20Token": "CW20 MSTBL - 주요 토큰, 수동 추가가 필요합니다",
+      "bothImportant": "두 토큰 유형 모두 시스템 사용에 중요합니다"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 현재 단계 가격 - 기간 한정!",
+    "scarcityAlert": "🔥 1,000,000 MSTBL 토큰만 존재 - 더 이상 생성할 수 없습니다!"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "codeId": 1,
+  "contractAddress": "wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d",
+  "uploadTx": "1F375ABD43E1ED83942C7FAC723FA21F5D45728BFFEAA922572CA06823D01E02",
+  "instantiateTx": "100DA478B69B1A4F18F5AE85E4BEC14FF2609B71473C14C986C105143A700911",
+  "validator": "<REDACTED_SEE_MASTER_KEYS>",
+  "totalSupply": "1100000000000",
+  "decimals": 6
+}
