@@ -15,7 +15,7 @@
       "display": "STAKE",
       "symbol": "STAKE",
       "logo_URIs": {
-        "png": "",
+        "png": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/frontend/public/MSTBL_LOGO.png",
         "svg": ""
       },
       "coingecko_id": ""
@@ -41,7 +41,7 @@
       "display": "mstbl",
       "symbol": "MSTBL",
       "logo_URIs": {
-        "png": "",
+        "png": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/frontend/public/MSTBL_LOGO.png",
         "svg": ""
       },
       "coingecko_id": "",
