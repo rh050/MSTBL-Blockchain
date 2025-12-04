@@ -1,9 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.37.0",
-    "@cosmjs/encoding": "^0.37.0",
-    "@cosmjs/proto-signing": "^0.37.0",
-    "bech32": "^2.0.0"
-  }
-}
