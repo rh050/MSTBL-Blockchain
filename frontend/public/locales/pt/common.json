@@ -1,0 +1,131 @@
+{
+  "title": "MSTBL - Milhão de Moedas Estáveis",
+  "subtitle": "O Futuro da Moeda Digital Estável",
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roteiro",
+    "community": "Comunidade"
+  },
+  "hero": {
+    "title": "Milhão de Moedas Estáveis",
+    "subtitle": "Moeda estável revolucionária baseada em Cosmos com mecânicas de venda progressiva",
+    "description": "Junte-se ao futuro das finanças descentralizadas com MSTBL - uma moeda estável totalmente garantida construída em Cosmos SDK com segurança multi-assinatura e governança transparente.",
+    "cta": {
+      "primary": "Comprar MSTBL",
+      "secondary": "Saber Mais"
+    }
+  },
+  "stats": {
+    "totalSupply": "Fornecimento Total",
+    "currentStage": "Estágio Atual",
+    "tokensRemaining": "Tokens Restantes",
+    "nextPrice": "Preço do Próximo Estágio"
+  },
+  "purchase": {
+    "title": "Comprar Tokens MSTBL",
+    "currentPrice": "Preço Atual",
+    "enterAmount": "Digite a Quantia USDC",
+    "youReceive": "Você receberá",
+    "connectWallet": "Conectar Carteira",
+    "buy": "Comprar MSTBL",
+    "processing": "Processando...",
+    "success": "Compra bem-sucedida!",
+    "error": "Compra falhada",
+    "scarcityWarning": "Apenas 1,000,000 tokens à venda - não é possível criar mais!",
+    "scarcityReminder": "Lembre-se: apenas 1,000,000 tokens existem para sempre!",
+    "scarcityDetails": "Não é possível criar mais | Preços só sobem | Primeiro a chegar, primeiro a ser servido",
+    "description": "Junte-se ao futuro da moeda digital estável com nossa venda progressiva"
+  },
+  "wallet": {
+    "connected": "Carteira Conectada",
+    "connecting": "Conectando...",
+    "connectWallet": "Conectar Carteira",
+    "connectWalletWithIcon": "🔗 Conectar Carteira",
+    "retry": "🔄 Tentar Novamente",
+    "readyToConnect": "Pronto para Conectar",
+    "readyDescription": "Keplr está instalado! Clique em conectar para vincular sua carteira e começar a usar MSTBL.",
+    "mobile": {
+      "required": "Aplicativo Móvel Keplr Necessário",
+      "description": "Instale o aplicativo móvel Keplr da loja de aplicativos do seu dispositivo para conectar sua carteira.",
+      "getApp": "📱 Obter Aplicativo"
+    },
+    "extension": {
+      "required": "Extensão Keplr Necessária",
+      "description": "Instale a extensão do navegador Keplr para conectar sua carteira.",
+      "install": "🌐 Instalar Extensão"
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "failed": "Falha ao carregar",
+    "live": "🔗 Ao Vivo",
+    "links": "Links"
+  },
+  "untranslatable": {
+    "note": "Alguns termos técnicos permanecem em inglês para consistência em todos os idiomas"
+  },
+  "brand": {
+    "name": "MSTBL",
+    "fullName": "Milhão de Moedas Estáveis",
+    "description": "O futuro da moeda digital estável construída em Cosmos SDK com segurança multi-assinatura e governança transparente."
+  },
+  "status": {
+    "progressiveSaleLive": "Venda Progressiva Ao Vivo",
+    "connectedToChain": "Conectado à Cadeia STBL",
+    "blockHeight": "Altura do Bloco",
+    "readyToPurchase": "Pronto para comprar - Blockchain ativo"
+  },
+  "price": {
+    "increased": "Preço Aumentou!",
+    "decreased": "Preço Diminuiu!",
+    "perToken": "por MSTBL",
+    "refreshWarning": "⚠️ Atualize sua compra para obter preços atualizados"
+  },
+  "features": {
+    "title": "Por que escolher MSTBL?",
+    "stability": {
+      "title": "Estabilidade de Preço",
+      "description": "Ativo estável de valor progressivo apoiado por reservas USDC ($1→$10→$100→$1000)"
+    },
+    "security": {
+      "title": "Segurança Multi-Assinatura",
+      "description": "Proteção multi-sig 2/2 - nenhuma entidade única pode mover fundos"
+    },
+    "transparency": {
+      "title": "Transparência Completa",
+      "description": "Toda transação na cadeia, visível em tempo real via Explorer"
+    },
+    "governance": {
+      "title": "Governança da Comunidade",
+      "description": "Votação futura em atualizações de protocolo e ações do tesouro"
+    }
+  },
+  "tokenomics": {
+    "title": "Visão Geral da Tokenomics",
+    "description": "Distribuição do Milhão de Moedas Estáveis e Progresso da Venda - Conectado à Cadeia STBL",
+    "loadError": "Falha ao carregar dados da tokenomics",
+    "allocation": {
+      "reserve": "Carteira de Reserva: 1,000,000 MSTBL (100%) - Venda pública (4 estágios)",
+      "marketing": "Marketing: 0 MSTBL (0%) - Sem alocação de marketing",
+      "treasury": "Tesouro: 0 MSTBL (0%) - Governança e expansão futura"
+    },
+    "stages": {
+      "title": "Estágios de Venda Progressiva",
+      "stage1": "Estágio 1: 250,000 MSTBL a $1.00 - 🟢 Ativo",
+      "stage2": "Estágio 2: 250,000 MSTBL a $10.00 - 🔜 Em Breve",
+      "stage3": "Estágio 3: 250,000 MSTBL a $100.00 - 🔜 Em Breve",
+      "stage4": "Estágio 4: 250,000 MSTBL a $1000.00 - 🔜 Em Breve",
+      "trigger": "O próximo estágio é desbloqueado quando 250,000 MSTBL são vendidos"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 MSTBL. Todos os direitos reservados.",
+    "links": {
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "contact": "Entre em Contato"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "title": "MSTBL - Millón de Monedas Estables",
+  "su  "tokenomics": {"title": "Resumen de Tokenomics",
+  "description": "Distribución de Million Stable Coin y Progreso de Venta - Conectado a la Cadena STBL",
+  "loadError": "Error al cargar datos de tokenomics",tle": "El Futuro de la Moneda Digital Estable","navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Hoja de Ruta",
+    "community": "Comunidad"
+  },
+  "hero": {
+    "title": "Millón de Monedas Estables",
+    "subtitle": "Moneda estable revolucionaria basada en Cosmos con mecánicas de venta progresiva",
+    "description": "Únete al futuro de las finanzas descentralizadas con MSTBL - una moneda estable completamente colaterizada construida en Cosmos SDK con seguridad multi-firma y gobernanza transparente.",
+    "cta": {
+      "primary": "Comprar MSTBL",
+      "secondary": "Saber Más"
+    }
+  },
+  "stats": {
+    "totalSupply": "Suministro Total",
+    "currentStage": "Etapa Actual",
+    "tokensRemaining": "Tokens Restantes",
+    "nextPrice": "Precio Siguiente Etapa"
+  },
+  "purchase": {
+    "title": "Comprar Tokens MSTBL",
+    "currentPrice": "Precio Actual",
+    "enterAmount": "Ingrese Cantidad USDC",
+    "youReceive": "Recibirás",
+    "connectWallet": "Conectar Cartera",
+    "buy": "Comprar MSTBL",
+    "processing": "Procesando...",
+    "success": "¡Compra exitosa!",
+    "error": "Compra fallida",
+    "scarcityWarning": "Solo 1,000,000 tokens en venta - ¡no se pueden crear más!",
+    "scarcityReminder": "Recuerda: ¡Solo existen 1,000,000 tokens para siempre!",
+    "scarcityDetails": "No se pueden crear más | Los precios solo suben | Primero en llegar, primero en comprar"
+  },
+  "wallet": {
+    "connected": "Cartera Conectada",
+    "connecting": "Conectando...",
+    "connectWallet": "Conectar Cartera",
+    "connectWalletWithIcon": "🔗 Conectar Cartera",
+    "retry": "🔄 Reintentar",
+    "readyToConnect": "Listo para Conectar",
+    "readyDescription": "¡Keplr está instalado! Haz clic en conectar para vincular tu cartera y comenzar a usar MSTBL.",
+    "mobile": {
+      "required": "Aplicación Móvil Keplr Requerida",
+      "description": "Instala la aplicación móvil Keplr desde la tienda de aplicaciones de tu dispositivo para conectar tu cartera.",
+      "getApp": "📱 Obtener Aplicación"
+    },
+    "extension": {
+      "required": "Extensión Keplr Requerida",
+      "description": "Instala la extensión del navegador Keplr para conectar tu cartera.",
+      "install": "🌐 Instalar Extensión"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "failed": "Error al cargar",
+    "live": "🔗 En Vivo",
+    "links": "Enlaces"
+  },
+  "brand": {
+    "name": "MSTBL",
+    "fullName": "Million Stable Coin",
+    "description": "El futuro de la moneda digital estable construida en Cosmos SDK con seguridad multi-firma y gobernanza transparente."
+  },
+  "status": {
+    "progressiveSaleLive": "Venta Progresiva en Vivo",
+    "connectedToChain": "Conectado a la Cadena STBL",
+    "blockHeight": "Altura del Bloque"
+  },
+  "price": {
+    "increased": "¡Precio Aumentado!",
+    "decreased": "¡Precio Disminuido!",
+    "perToken": "por MSTBL",
+    "refreshWarning": "⚠️ Actualiza tu compra para obtener precios actualizados"
+  },
+  "features": {
+    "title": "¿Por qué elegir MSTBL?",
+    "stability": {
+      "title": "Estabilidad de Precio",
+      "description": "Activo estable de valor progresivo respaldado por reservas USDC ($1→$10→$100→$1000)"
+    },
+    "security": {
+      "title": "Seguridad Multi-Firma",
+      "description": "Protección multi-firma 2/2 - ninguna entidad puede mover fondos sola"
+    },
+    "transparency": {
+      "title": "Transparencia Completa",
+      "description": "Cada transacción en cadena, visible en tiempo real vía Explorer"
+    },
+    "governance": {
+      "title": "Gobernanza Comunitaria",
+      "description": "Votación futura sobre actualizaciones de protocolo y acciones del tesoro"
+    }
+  },
+  "tokenomics": {
+    "title": "Resumen de Tokenomics",
+    "description": "Un suministro limitado de 1 millón de MSTBL asegura escasez a largo plazo y apreciación de valor.",
+    "allocation": {
+      "reserve": "Cartera de Reserva: 1,000,000 MSTBL (100%) - Venta pública (4 etapas)",
+      "marketing": "Marketing: 0 MSTBL (0%) - Sin asignación de marketing",
+      "treasury": "Tesoro: 0 MSTBL (0%) - Gobernanza y expansión futura"
+    },
+    "stages": {
+      "title": "Etapas de Venta Progresiva",
+      "stage1": "Etapa 1: 250,000 MSTBL a $1.00 - 🟢 Activa",
+      "stage2": "Etapa 2: 250,000 MSTBL a $10.00 - 🔜 Próxima",
+      "stage3": "Etapa 3: 250,000 MSTBL a $100.00 - 🔜 Próxima",
+      "stage4": "Etapa 4: 250,000 MSTBL a $1000.00 - 🔜 Próxima",
+      "trigger": "La siguiente etapa se desbloquea cuando se venden 250,000 MSTBL"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 MSTBL. Todos los derechos reservados.",
+    "links": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "contact": "Contáctanos"
+    }
+  }
+}

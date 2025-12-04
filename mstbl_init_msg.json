@@ -1,0 +1,14 @@
+{
+  "name": "Million Stable Coin",
+  "symbol": "MSTBL",
+  "decimals": 6,
+  "initial_balances": [
+    {
+      "address": "wasm1re0pq3tyrtfen6mmjzdtpays46ssp7kdx3vptp",
+      "amount": "1100000000000"
+    }
+  ],
+  "mint": {
+    "minter": "wasm1re0pq3tyrtfen6mmjzdtpays46ssp7kdx3vptp"
+  }
+}

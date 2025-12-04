@@ -1,0 +1,23 @@
+{
+  "name": "Million Stable Coin",
+  "symbol": "MSTBL",
+  "decimals": 6,
+  "initial_balances": [
+    {
+      "address": "wasm1aakfpghcanxtc45gpqlx8j3rq0zcpyf49qmhm9mdjrfx036h4z5se0hfnq",
+      "amount": "50000000000"
+    },
+    {
+      "address": "wasm15vmmdfsalwkg9ndscwy9kxzffpqwtlxfpf9y5j", 
+      "amount": "850000000000"
+    },
+    {
+      "address": "wasm10yn22389kzz0r5433m46s8qflep4uc7tae8k8m",
+      "amount": "250000000000"
+    }
+  ],
+  "mint": {
+    "minter": "wasm1aakfpghcanxtc45gpqlx8j3rq0zcpyf49qmhm9mdjrfx036h4z5se0hfnq",
+    "cap": null
+  }
+}

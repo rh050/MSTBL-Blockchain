@@ -1,0 +1,47 @@
+=== MSTBL SECURE WALLET INFORMATION ===
+Generated: Tue Sep 30 15:14:19 UTC 2025
+Chain ID: mstbl-1
+Network: MSTBL Blockchain
+
+=== TREASURY WALLET (Multi-sig 2/2) ===
+Address: wasm18a47g3qfrknlyuwra02tr4n4g5dq6h2fq3ss7j
+Mnemonic: hub river glow unit stem dynamic concert job obey until bind frequent duck donor tonight blast push vacuum soda bracket merge slab summer unlock
+Purpose: Holds main token supply, requires 2/2 signatures
+Initial Balance: 1,100,000 MSTBL
+
+=== MARKETING WALLET ===
+Address: wasm19fgsf2rrq455rfa3ru5kyxwhjdkfkyt6607ngd
+Mnemonic: case steak weekend scorpion domain metal west page spider rookie salon metal daughter brand there maximum boil crawl flee nurse pave raw busy later
+Purpose: Marketing and promotional activities
+Target Balance: 100,000 MSTBL
+
+=== SALE CONTRACT ADMIN ===
+Address: wasm10yn22389kzz0r5433m46s8qflep4uc7tae8k8m
+Mnemonic: dog fiber reduce family alien van luggage parent resist base output sketch tongue amateur street brick pretty bubble farm fence reduce call artist turtle
+Purpose: Admin for sale contract operations
+Target Control: 1,000,000 MSTBL for sales
+
+=== SECURITY NOTES ===
+- Store mnemonics in secure, encrypted storage
+- Treasury requires multi-sig setup for security
+- Marketing wallet for promotional use only
+- Sale admin controls token distribution to customers
+- All wallets use test keyring for development
+
+=== CONTRACT INFORMATION ===
+Old Contract (1B): wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d
+New Contract (1.1M): wasm1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrss5maay ✅ ACTIVE
+Code ID: 1
+Deploy Transaction: C4B11D7F787F89E8BDD4C6A76570F332083D0DFCF83A6275C1EE271C31835C7A
+
+=== TOKEN DISTRIBUTION STATUS ===
+✅ Total Supply: 1,100,000 MSTBL (CORRECT!)
+✅ Treasury Balance: 1,100,000 MSTBL (All tokens)
+⏳ Marketing Transfer: 0 → 100,000 MSTBL (Pending)
+⏳ Sale Contract: 0 → 1,000,000 MSTBL (Pending)
+
+=== BITCOIN INTEGRATION PLAN ===
+- Customer pays BTC → Bitcoin Collection Wallet
+- Frontend verifies payment via Bitcoin API
+- Sale contract releases MSTBL to customer Keplr wallet
+- Payment processing through automated smart contract
