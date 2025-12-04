@@ -1,8 +1,7 @@
 {
   "title": "MSTBL - Millón de Monedas Estables",
-  "su  "tokenomics": {"title": "Resumen de Tokenomics",
-  "description": "Distribución de Million Stable Coin y Progreso de Venta - Conectado a la Cadena STBL",
-  "loadError": "Error al cargar datos de tokenomics",tle": "El Futuro de la Moneda Digital Estable","navigation": {
+  "subtitle": "El Futuro de la Moneda Digital Estable",
+  "navigation": {
     "home": "Inicio",
     "about": "Acerca de",
     "tokenomics": "Tokenomics",
@@ -100,7 +99,8 @@
   },
   "tokenomics": {
     "title": "Resumen de Tokenomics",
-    "description": "Un suministro limitado de 1 millón de MSTBL asegura escasez a largo plazo y apreciación de valor.",
+    "description": "Distribución de Million Stable Coin y Progreso de Venta - Conectado a la Cadena STBL",
+    "loadError": "Error al cargar datos de tokenomics",
     "allocation": {
       "reserve": "Cartera de Reserva: 1,000,000 MSTBL (100%) - Venta pública (4 etapas)",
       "marketing": "Marketing: 0 MSTBL (0%) - Sin asignación de marketing",
@@ -122,5 +122,39 @@
       "terms": "Términos de Servicio",
       "contact": "Contáctanos"
     }
+  },
+  "walletInfo": {
+    "title": "💎 Información de Tu Cartera",
+    "description": "Ver componentes de tu cartera - Native MSTBL y CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 Añadir Tokens CW20 MSTBL a Keplr",
+    "description": "Para ver el saldo de tus tokens CW20 MSTBL en tu cartera Keplr",
+    "autoAddButton": "⚡ Añadir Token Automáticamente a Keplr",
+    "manualInstructions": "📝 Instrucciones de Adición Manual:",
+    "step1": "Abre Keplr y haz clic en \"Manage Token List\"",
+    "step2": "Haz clic en \"Add Token\" o \"+\"",
+    "step3": "Completa los siguientes detalles:",
+    "step4": "Haz clic en \"Add\" o \"Submit\" para completar",
+    "importantNote": "⚠️ Importante: Después de añadir el token, puede que necesites esperar unos minutos para que el saldo aparezca en la cartera. Si el saldo no aparece, intenta refrescar Keplr.",
+    "alerts": {
+      "connectFirst": "Por favor, conéctate a Keplr primero",
+      "success": "✅ ¡Token CW20 MSTBL añadido exitosamente a Keplr!",
+      "connectionIssue": "🔌 Problema de conexión con Keplr. Asegúrate de que la extensión esté activa e inténtalo de nuevo.\n\nSe mostrarán ahora las instrucciones de adición manual.",
+      "notSupported": "📋 Tu versión de Keplr no soporta la adición automática.\n\nSe mostrarán ahora las instrucciones de adición manual.",
+      "failed": "⚠️ No se pudo añadir el token automáticamente.\n\nSe mostrarán ahora las instrucciones de adición manual.",
+      "copied": "✅ Copiado al portapapeles: "
+    },
+    "usefulInfo": {
+      "title": "💡 Información Útil:",
+      "nativeToken": "Native MSTBL - Aparece automáticamente y se usa para tarifas de transacción",
+      "cw20Token": "CW20 MSTBL - Los tokens principales, requieren adición manual",
+      "bothImportant": "Ambos tipos de token son importantes para usar el sistema"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 Precio de Etapa Actual - ¡Por Tiempo Limitado!",
+    "scarcityAlert": "🔥 ¡Solo existen 1,000,000 tokens MSTBL - No se pueden crear más!"
   }
 }

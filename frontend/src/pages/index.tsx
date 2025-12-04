@@ -11,7 +11,11 @@ import Hero from '@/components/Hero';
 import PurchaseFlow from '@/components/PurchaseFlow';
 import Tokenomics from '@/components/Tokenomics';
 import WalletConnectionGuide from '@/components/WalletConnectionGuide';
+import SimpleWalletBalance from '@/components/SimpleWalletBalance';
+import CW20TokenGuide from '@/components/CW20TokenGuide';
 import PriceAlert from '@/components/PriceAlert';
+import InsufficientBalanceModal from '@/components/InsufficientBalanceModal';
+import MobilePurchaseGuide from '@/components/MobilePurchaseGuide';
 // Hooks
 import { useKeplr } from '@/hooks/useKeplr';
 
@@ -20,6 +24,9 @@ export default function HomePage() {
   // const [showPurchaseModal, setShowPurchaseModal] = useState(false);
   const [showWalletGuide, setShowWalletGuide] = useState(false);
   const [liveStats, setLiveStats] = useState<any>(null);
+  const [showInsufficientBalanceModal, setShowInsufficientBalanceModal] = useState(false);
+  const [insufficientBalanceData, setInsufficientBalanceData] = useState<any>(null);
+  const [showMobilePurchaseGuide, setShowMobilePurchaseGuide] = useState(false);
 
   const {
     walletInfo,
@@ -29,6 +36,7 @@ export default function HomePage() {
     connect,
     // disconnect,
     sendTokens,
+    getUsdcBalance,
     // getBalance,
     openKeplrInstallation,
   } = useKeplr();
@@ -37,7 +45,8 @@ export default function HomePage() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('/api/live-stats');
+        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_API || 'https://mstbl-backend-329336973316.us-central1.run.app';
+        const response = await fetch(`${backendUrl}/api/live-stats`);
         const data = await response.json();
         setLiveStats(data);
       } catch (error) {
@@ -52,6 +61,13 @@ export default function HomePage() {
   }, []);
 
   const handleConnectWallet = async () => {
+    // If on mobile, show the simplified guide instead of complex detection
+    if (isMobile) {
+      setShowMobilePurchaseGuide(true);
+      return;
+    }
+
+    // Desktop flow
     const connected = await connect();
     if (!connected && !isKeplrInstalled) {
       setShowWalletGuide(true);
@@ -76,9 +92,19 @@ export default function HomePage() {
   };
 
   const handlePurchase = async (usdcAmount: string, mstblAmount: string) => {
+    // If on mobile and not connected, show mobile purchase guide
+    if (isMobile && !walletInfo) {
+      setShowMobilePurchaseGuide(true);
+      return {
+        success: false,
+        error: 'Please follow the mobile setup guide'
+      };
+    }
+
     try {
-      // CRITICAL: Get fresh price data before purchase to prevent race conditions
-      const priceResponse = await fetch('/api/live-stats');
+      // CRITICAL: Get fresh price data from backend before purchase
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_API || 'https://mstbl-backend-329336973316.us-central1.run.app';
+      const priceResponse = await fetch(`${backendUrl}/api/live-stats`);
       const freshStats = await priceResponse.json();
       const freshPrice = freshStats.stagePrice;
 
@@ -95,18 +121,87 @@ export default function HomePage() {
         };
       }
 
-      // For now, we'll simulate a purchase by sending USDC to a treasury address
-      // In a real implementation, this would interact with a smart contract
-      const treasuryAddress = 'stbl1treasury...'; // This would be the actual treasury address
-      const usdcDenom = 'uusdc';
+      // PROPER FLOW: User sends USDC directly to Treasury
+      // Backend monitors Treasury and sends MSTBL from Sale Wallet automatically
+      const treasuryAddress = process.env.NEXT_PUBLIC_TREASURY_ADDRESS || 'wasm14ye36mw96z3us3qlfytppkse7m7258egymvsuu';
+
+      // Check if user has enough USDC balance first
+      if (!walletInfo) {
+        return { success: false, error: 'Please connect your wallet first' };
+      }
+
+      // Check USDC balance via backend
+      try {
+        const balanceResponse = await fetch(`${backendUrl}/check-usdc-balance`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            address: walletInfo.address,
+            requiredAmount: usdcAmount
+          })
+        });
+
+        const balanceData = await balanceResponse.json();
+
+        if (!balanceData.hasEnoughUsdc && balanceData.insufficientFunds) {
+          const { insufficientFunds } = balanceData;
+
+          // Show modal instead of returning error
+          setInsufficientBalanceData({
+            title: insufficientFunds.title,
+            current: insufficientFunds.current,
+            required: insufficientFunds.required,
+            deficit: insufficientFunds.deficit,
+            action: insufficientFunds.action,
+            keplrAction: insufficientFunds.keplrAction
+          });
+          setShowInsufficientBalanceModal(true);
+
+          return {
+            success: false,
+            error: null // No error message needed, modal will handle it
+          };
+        }
+      } catch (balanceError) {
+        console.warn('Balance check failed, proceeding with transaction:', balanceError);
+      }
+
+      // For USDC on Cosmos chains, try standard denomination first
+      const usdcDenom = 'usdc'; // USDC standard denomination
       const amountInMicroUsdc = (parseFloat(usdcAmount) * 1_000_000).toString();
+
+      console.log(`🎯 Sending ${usdcAmount} USDC to Treasury: ${treasuryAddress}`);
+      console.log(`💰 MSTBL to receive: ${mstblAmount} MSTBL`);
+      console.log(`📊 Transaction details:`, {
+        from: walletInfo.address,
+        to: treasuryAddress,
+        amount: amountInMicroUsdc,
+        denom: usdcDenom
+      });
 
       const result = await sendTokens(treasuryAddress, amountInMicroUsdc, usdcDenom);
 
       if (result.success) {
-        // In a real implementation, the smart contract would automatically mint MSTBL tokens
-        // For demo purposes, we'll just show success
-        return { success: true };
+        // Notify backend about the transaction for monitoring
+        try {
+          await fetch(`${backendUrl}/process-purchase`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              txHash: result.txHash,
+              amount: usdcAmount,
+              userAddress: walletInfo.address,
+              expectedMstbl: mstblAmount
+            })
+          });
+        } catch (backendError) {
+          console.warn('Backend notification failed:', backendError);
+        }
+
+        return {
+          success: true,
+          message: `Purchase completed! You sent ${usdcAmount} USDC to Treasury. You will receive ${mstblAmount} MSTBL shortly. Transaction: ${result.txHash}`
+        };
       } else {
         return { success: false, error: result.error };
       }
@@ -206,6 +301,27 @@ export default function HomePage() {
             isWalletLoading={isLoading}
             onInstallKeplr={handleInstallKeplr}
           />
+
+          {/* Wallet Balance Section - Show only when wallet is connected */}
+          {walletInfo && (
+            <section className="py-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    {t('walletInfo.title')}
+                  </h2>
+                  <p className="text-lg text-gray-600">
+                    {t('walletInfo.description')}
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <SimpleWalletBalance />
+                  <CW20TokenGuide />
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* About Section */}
           <section id="about" className="py-20 bg-gray-50">
@@ -325,6 +441,24 @@ export default function HomePage() {
             onRetryConnection={handleRetryConnection}
           />
         )}
+
+        {/* Insufficient Balance Modal */}
+        {showInsufficientBalanceModal && insufficientBalanceData && (
+          <InsufficientBalanceModal
+            isOpen={showInsufficientBalanceModal}
+            onClose={() => {
+              setShowInsufficientBalanceModal(false);
+              setInsufficientBalanceData(null);
+            }}
+            data={insufficientBalanceData}
+          />
+        )}
+
+        {/* Mobile Purchase Guide */}
+        <MobilePurchaseGuide
+          isOpen={showMobilePurchaseGuide}
+          onClose={() => setShowMobilePurchaseGuide(false)}
+        />
 
         {/* Price Alert Component */}
         <PriceAlert

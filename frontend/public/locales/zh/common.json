@@ -84,5 +84,39 @@
       "terms": "服务条款",
       "contact": "联系我们"
     }
+  },
+  "walletInfo": {
+    "title": "💎 您的钱包信息",
+    "description": "查看您的钱包组件 - Native MSTBL 和 CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 将 CW20 MSTBL 代币添加到 Keplr",
+    "description": "在您的 Keplr 钱包中查看 CW20 MSTBL 代币余额",
+    "autoAddButton": "⚡ 自动将代币添加到 Keplr",
+    "manualInstructions": "📝 手动添加说明：",
+    "step1": "打开 Keplr 并点击 \\"Manage Token List\\"",
+    "step2": "点击 \\"Add Token\\" 或 \\"+\\"",
+    "step3": "填写以下详细信息：",
+    "step4": "点击 \\"Add\\" 或 \\"Submit\\" 完成",
+    "importantNote": "⚠️ 重要提示：添加代币后，您可能需要等待几分钟，余额才会显示在钱包中。如果余额未显示，请尝试刷新 Keplr。",
+    "alerts": {
+      "connectFirst": "请先连接到 Keplr",
+      "success": "✅ CW20 MSTBL 代币已成功添加到 Keplr！",
+      "connectionIssue": "🔌 Keplr 连接问题。请确保扩展程序处于活动状态并重试。\\n\\n现在将显示手动添加说明。",
+      "notSupported": "📋 您的 Keplr 版本不支持自动添加。\\n\\n现在将显示手动添加说明。",
+      "failed": "⚠️ 自动添加代币失败。\\n\\n现在将显示手动添加说明。",
+      "copied": "✅ 已复制到剪贴板："
+    },
+    "usefulInfo": {
+      "title": "💡 有用信息:",
+      "nativeToken": "Native MSTBL - 自动显示并用于交易费用",
+      "cw20Token": "CW20 MSTBL - 主要代币，需要手动添加",
+      "bothImportant": "两种代币类型对于使用系统都很重要"
+    }
+  }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 当前阶段价格 - 限时优惠！",
+    "scarcityAlert": "🔥 仅存在 1,000,000 个 MSTBL 代币 - 无法创建更多！"
   }
 }

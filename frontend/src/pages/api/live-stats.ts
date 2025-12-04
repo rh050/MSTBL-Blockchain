@@ -19,10 +19,10 @@ export type LiveStatsData = {
   }>;
 };
 
-// Configuration for STBL chain endpoints - using local validator
-const STBL_RPC_ENDPOINT = process.env.STBL_RPC_ENDPOINT || 'http://localhost:26657';
-const STBL_REST_ENDPOINT = process.env.STBL_REST_ENDPOINT || 'http://localhost:1317';
-const STBL_CHAIN_ID = process.env.STBL_CHAIN_ID || 'stbl-1';
+// Configuration for STBL chain endpoints - using production endpoints
+const STBL_RPC_ENDPOINT = process.env.STBL_RPC_ENDPOINT || 'https://rpc.stbl.mstbl.com';
+const STBL_REST_ENDPOINT = process.env.STBL_REST_ENDPOINT || 'https://api.stbl.mstbl.com';
+const STBL_CHAIN_ID = process.env.STBL_CHAIN_ID || 'mstbl-1';
 
 export default async function handler(
   req: NextApiRequest,

@@ -127,5 +127,38 @@
       "terms": "Terms of Service",
       "contact": "Contact Us"
     }
+  },
+  "walletInfo": {
+    "title": "💎 Your Wallet Information",
+    "description": "View your wallet components - Native MSTBL and CW20 MSTBL"
+  },
+  "cw20Guide": {
+    "title": "🎯 Adding CW20 MSTBL Tokens to Keplr",
+    "description": "To view your CW20 MSTBL token balance in your Keplr wallet",
+    "autoAddButton": "⚡ Add Token Automatically to Keplr",
+    "manualInstructions": "📝 Manual Addition Instructions:",
+    "step1": "Open Keplr and click on \"Manage Token List\"",
+    "step2": "Click on \"Add Token\" or \"+\"",
+    "step3": "Fill in the following details:",
+    "step4": "Click on \"Add\" or \"Submit\" to complete",
+    "importantNote": "⚠️ Important: After adding the token, you may need to wait a few minutes for the balance to appear in the wallet. If the balance doesn't show, try refreshing Keplr.",
+    "alerts": {
+      "connectFirst": "Please connect to Keplr first",
+      "success": "✅ CW20 MSTBL token successfully added to Keplr!",
+      "connectionIssue": "🔌 Keplr connection issue. Please make sure the extension is active and try again.\n\nManual addition instructions will now be displayed.",
+      "notSupported": "📋 Your Keplr version doesn't support automatic addition.\n\nManual addition instructions will now be displayed.",
+      "failed": "⚠️ Failed to add token automatically.\n\nManual addition instructions will now be displayed.",
+      "copied": "✅ Copied to clipboard: "
+    },
+    "usefulInfo": {
+      "title": "💡 Useful Information:",
+      "nativeToken": "Native MSTBL - Appears automatically and is used for transaction fees",
+      "cw20Token": "CW20 MSTBL - The main tokens, require manual addition",
+      "bothImportant": "Both token types are important for using the system"
+    }
+  },
+  "stageBanner": {
+    "currentPrice": "💎 Current Stage Price - Limited Time!",
+    "scarcityAlert": "🔥 Only 1,000,000 MSTBL tokens exist - No more can be created!"
   }
 }

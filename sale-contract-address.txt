@@ -1,1 +1,0 @@
-wasm1mock-sale-contract-address-for-validation-testing

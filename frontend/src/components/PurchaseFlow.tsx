@@ -137,7 +137,7 @@ const PurchaseFlow: React.FC<PurchaseFlowProps> = ({
               </div>
               <div className="text-xs text-gray-500 mb-2">per MSTBL Token</div>
               <div className="text-xs font-semibold text-green-600 bg-green-50 rounded px-2 py-1 inline-block">
-                💎 מחיר השלב הנוכחי - לזמן מוגבל!
+                {t('stageBanner.currentPrice')}
               </div>
             </div>
 
@@ -289,11 +289,11 @@ const PurchaseFlow: React.FC<PurchaseFlowProps> = ({
                   className="w-full"
                 >
                   {purchaseStatus === 'processing' ? (
-                    '⏳ מעבד רכישה...'
+                    <>⏳ {t('purchase.processing')}</>
                   ) : (
                     <>
                       <CreditCardIcon className="w-5 h-5 mr-2 rtl:ml-2 rtl:mr-0" />
-                      🚀 קנה עכשיו במחיר ${currentPrice.toFixed(2)}!
+                      🚀 {t('purchase.buy')} - ${currentPrice.toFixed(2)}!
                     </>
                   )}
                 </Button>

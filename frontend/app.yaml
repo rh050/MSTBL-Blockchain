@@ -1,0 +1,22 @@
+runtime: nodejs18
+env: standard
+service: mstbl-frontend
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+  target_cpu_utilization: 0.6
+
+env_variables:
+  NEXT_PUBLIC_CHAIN_ID: "mstbl-1"
+  NEXT_PUBLIC_RPC_ENDPOINT: "https://rpc.stbl.mstbl.com"
+  NEXT_PUBLIC_REST_ENDPOINT: "https://api.stbl.mstbl.com"
+  NEXT_PUBLIC_MSTBL_CONTRACT: "wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d"
+  NEXT_PUBLIC_COIN_DENOM: "mstbl"
+  NODE_ENV: "production"
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+  redirect_http_response_code: 301
