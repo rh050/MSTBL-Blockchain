@@ -49,6 +49,46 @@ stbl/chain/.wasmd/
 # Temporary files
 tmp/
 temp/
+
+# Documentation (internal use only)
+*_GUIDE.md
+*_REPORT.md
+*_STATUS.md
+*_SUMMARY.md
+*_AUDIT.md
+*_CHECKLIST.md
+
+# Keyring directories (sensitive)
+*-keyring/
+keyring-*/
+
+# Scripts (deployment/setup only)
+create_*.sh
+create_*.ps1
+enable_*.sh
+disable_*.sh
+verify_*.sh
+fix_*.sh
+DELETE_*.sh
+find_*.js
+query_*.sh
+
+# Nested git repositories
+keplr-chain-registry/
+my-keplr-fork/
+keplr-submission/
+
+# WASM files
+*.wasm
+
+# JSON configs (temporary)
+unsigned_*.json
+contract_deployment.json
+
+# Backup files
+*.bak
+*.bak2
+*.backup
 *.tmp
 
 MSTBL_MASTER_KEYS.txt
