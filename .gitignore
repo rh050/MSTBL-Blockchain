@@ -162,6 +162,9 @@ desktop.ini
 # 🎯 PROJECT SPECIFIC
 # ========================================
 
+# Frontend (private code)
+frontend/
+
 # Binary files
 stbld.exe
 stbld
