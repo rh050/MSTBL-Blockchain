@@ -1,17 +1,42 @@
-# Environment variables and secrets
+# ========================================
+# 🔒 SECURITY - SENSITIVE FILES
+# ========================================
+
+# Environment variables (may contain mnemonics/secrets!)
 .env
 .env.*
 *.env
+!.env.example
 backend/.env
 backend/.env.*
+backend/.env.new
+frontend/.env
+frontend/.env.local
+frontend/.env.local.*
+!frontend/.env.example
 
 # Private keys and sensitive data
 *private*key*.txt
 *mnemonic*.txt
+*seed*.txt
 *.hex
 *secret*.txt
 TREASURY_*.txt
 VALIDATOR_*.txt
+SALE_*.txt
+RESERVE_*.txt
+*_KEYS.txt
+*_MASTER_*.txt
+
+# Keyfiles
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ========================================
+# 📦 DEPENDENCIES & BUILD
+# ========================================
 
 # Node modules
 node_modules/
@@ -22,7 +47,12 @@ backend/node_modules/
 dist/
 build/
 .next/
+frontend/.next/
 out/
+
+# Package locks (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
 
 # Logs
 *.log
@@ -30,41 +60,53 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# OS files
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-
-# IDE
-.vscode/
-.idea/
-*.iml
+# ========================================
+# 🗄️ DATABASE & BLOCKCHAIN DATA
+# ========================================
 
 # Blockchain data
 stbl/chain/data/
 stbl/chain/.wasmd/
 *.db
+faucet.db
+
+# Keyring directories (contain private keys!)
+*-keyring/
+keyring-*/
+.keyring/
+
+# ========================================
+# 📁 TEMPORARY & GENERATED FILES
+# ========================================
 
 # Temporary files
 tmp/
 temp/
+*.tmp
 
-# Documentation (internal use only)
-*_GUIDE.md
-*_REPORT.md
-*_STATUS.md
-*_SUMMARY.md
-*_AUDIT.md
-*_CHECKLIST.md
+# Backup files
+*.bak
+*.bak2
+*.backup
 
-# Keyring directories (sensitive)
-*-keyring/
-keyring-*/
+# WASM files (large, can be downloaded)
+*.wasm
 
-# Scripts (deployment/setup only)
+# JSON configs (temporary/sensitive)
+unsigned_*.json
+contract_deployment.json
+genesis_shared.json
+*_genesis.json
+
+# ========================================
+# 📜 SCRIPTS & INTERNAL DOCS
+# ========================================
+
+# Setup/deployment scripts (may contain sensitive logic)
 create_*.sh
 create_*.ps1
+setup_*.sh
+setup_*.ps1
 enable_*.sh
 disable_*.sh
 verify_*.sh
@@ -73,22 +115,69 @@ DELETE_*.sh
 find_*.js
 query_*.sh
 
+# Internal documentation
+*_GUIDE.md
+*_REPORT.md
+*_STATUS.md
+*_SUMMARY.md
+*_AUDIT.md
+*_CHECKLIST.md
+*_COMPLETE.md
+*_SUCCESS.md
+*_PLAN.md
+*_ROADMAP.md
+*_INSTRUCTIONS.md
+
+# ========================================
+# 🌐 NESTED REPOS & EXTERNAL
+# ========================================
+
 # Nested git repositories
 keplr-chain-registry/
 my-keplr-fork/
 keplr-submission/
 
-# WASM files
+# Archive files
+*.zip
+*.tar.gz
+*.7z
+
+# ========================================
+# 💻 OS & IDE
+# ========================================
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+desktop.ini
+
+# IDE
+.idea/
+*.iml
+*.sublime-*
+
+# ========================================
+# 🎯 PROJECT SPECIFIC
+# ========================================
+
+# Binary files
+stbld.exe
+stbld
+*.exe
+
+# WASM contract files (can be downloaded from releases)
+cw20_base.wasm
 *.wasm
 
-# JSON configs (temporary)
-unsigned_*.json
-contract_deployment.json
+# Multi-validator setup files
+multi_val_setup/
+val*/
+stbl-val*/
 
-# Backup files
-*.bak
-*.bak2
-*.backup
-*.tmp
-
-MSTBL_MASTER_KEYS.txt
+# Old/deprecated folders
+stbl-network-*/
+stbl-real/
+stbl-chain/
+mock-stbld/

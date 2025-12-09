@@ -7,6 +7,7 @@
 MSTBL (Million Stable Coin) is a Cosmos SDK-based blockchain built with CosmWasm smart contract support. The project features a CW20 token with a fixed supply of 1.1 million MSTBL tokens.
 
 **Live Services:**
+
 - 🌐 Website: [https://mstbl.com](https://mstbl.com)
 - 🔗 RPC Endpoint: `https://rpc.stbl.mstbl.com`
 - 📡 REST API: `https://api.stbl.mstbl.com`
@@ -84,6 +85,7 @@ NEXT_PUBLIC_MSTBL_CONTRACT=wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmf
 ## 🔐 Smart Contract Details
 
 **CW20 Token Contract:**
+
 ```
 Address: wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d
 Total Supply: 1,100,000 MSTBL (1,100,000,000,000 ustbl)
@@ -93,6 +95,7 @@ Standard: CW20 (CosmWasm)
 ```
 
 **View on Explorer:**
+
 ```bash
 # Query contract info
 curl https://api.stbl.mstbl.com/cosmwasm/wasm/v1/contract/wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d
@@ -100,17 +103,18 @@ curl https://api.stbl.mstbl.com/cosmwasm/wasm/v1/contract/wasm14hj2tavq8fpesdwxx
 
 ## 🌐 Blockchain Specifications
 
-| Property | Value |
-|----------|-------|
-| Chain ID | `mstbl-1` |
-| Bech32 Prefix | `wasm` |
-| Coin Type | 118 (Cosmos standard) |
-| Block Time | ~6 seconds |
-| Consensus | Tendermint 0.34.0 |
-| SDK Version | Cosmos SDK 0.45.0 |
-| WASM Version | CosmWasm 1.0.0 |
+| Property      | Value                 |
+| ------------- | --------------------- |
+| Chain ID      | `mstbl-1`             |
+| Bech32 Prefix | `wasm`                |
+| Coin Type     | 118 (Cosmos standard) |
+| Block Time    | ~6 seconds            |
+| Consensus     | Tendermint 0.34.0     |
+| SDK Version   | Cosmos SDK 0.45.0     |
+| WASM Version  | CosmWasm 1.0.0        |
 
 **Public Endpoints:**
+
 - RPC: `https://rpc.stbl.mstbl.com`
 - REST: `https://api.stbl.mstbl.com`
 - WebSocket: `wss://rpc.stbl.mstbl.com/websocket`
@@ -128,6 +132,7 @@ MSTBL is fully integrated with Keplr Wallet:
 4. Start using MSTBL tokens
 
 **Keplr Chain Registry:**
+
 - PR Status: [#1344](https://github.com/chainapsis/keplr-chain-registry/pull/1344) (Open)
 - Files: `chain.json`, `assetlist.json`, `README.md`
 
@@ -135,18 +140,18 @@ MSTBL is fully integrated with Keplr Wallet:
 
 ```typescript
 // Using CosmJS
-import { SigningStargateClient } from '@cosmjs/stargate';
+import { SigningStargateClient } from "@cosmjs/stargate";
 
 const chainInfo = {
-  chainId: 'mstbl-1',
-  chainName: 'MSTBL Network',
-  rpc: 'https://rpc.stbl.mstbl.com',
-  rest: 'https://api.stbl.mstbl.com',
+  chainId: "mstbl-1",
+  chainName: "MSTBL Network",
+  rpc: "https://rpc.stbl.mstbl.com",
+  rest: "https://api.stbl.mstbl.com",
   // ... see chain-registry/mstbl/chain.json for full config
 };
 
 await window.keplr.experimentalSuggestChain(chainInfo);
-await window.keplr.enable('mstbl-1');
+await window.keplr.enable("mstbl-1");
 ```
 
 ## 📊 Tokenomics
@@ -161,12 +166,14 @@ await window.keplr.enable('mstbl-1');
 ## 🛠️ Technology Stack
 
 **Blockchain Layer:**
+
 - Cosmos SDK 0.45.0
 - Tendermint BFT Consensus 0.34.0
 - CosmWasm 1.0.0
 - CW20 Token Standard
 
 **Frontend Stack:**
+
 - Next.js 14
 - React 18
 - TypeScript
@@ -175,11 +182,13 @@ await window.keplr.enable('mstbl-1');
 - i18next (Multi-language support)
 
 **Backend Services:**
+
 - Node.js
 - Express.js
 - CosmJS Client
 
 **Infrastructure:**
+
 - **Cloud Provider:** Google Cloud Platform
 - **Compute:** GCE e2-medium (us-central1-c)
 - **Frontend Hosting:** Cloud Run
@@ -210,6 +219,7 @@ sudo caddy run --config /root/Caddyfile
 ```
 
 **Caddyfile Configuration:**
+
 - Automatic HTTPS (Let's Encrypt)
 - CORS headers for all origins
 - Path rewriting for Keplr compatibility
@@ -255,6 +265,7 @@ open https://mstbl.com/debug
 ## 🔒 Security
 
 **Best Practices:**
+
 - ✅ No private keys or mnemonics in repository
 - ✅ Environment variables for sensitive data
 - ✅ `.gitignore` excludes all secrets
@@ -263,6 +274,7 @@ open https://mstbl.com/debug
 - ✅ Smart contract minting permanently disabled
 
 **Files Excluded from Git:**
+
 - `*.env` (environment variables)
 - `*private*key*.txt` (private keys)
 - `*mnemonic*.txt` (seed phrases)
