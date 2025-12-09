@@ -1,6 +1,6 @@
 # MSTBL - Million Stable Coin Blockchain
 
-![MSTBL Logo](frontend/public/MSTBL_LOGO.png)
+![MSTBL Logo](images/MSTBL_LOGO.png)
 
 ## 🌟 Overview
 
