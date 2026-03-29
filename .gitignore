@@ -184,3 +184,6 @@ stbl-network-*/
 stbl-real/
 stbl-chain/
 mock-stbld/
+
+# Secure wallets archive - NEVER commit
+SECURE_WALLETS_ARCHIVE/
