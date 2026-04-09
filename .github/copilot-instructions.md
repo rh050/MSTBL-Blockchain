@@ -12,8 +12,9 @@ This is a Cosmos SDK-based blockchain project for the Million Stable Coin (STBL)
 
 ## Key Conventions
 - Use `stbld` as the binary name throughout the project
-- Chain ID is `stbl-1` and bech32 prefix is `stbl`
+- Chain ID is `mstbl-1` and bech32 prefix is `wasm`
 - Base denomination is `ustbl` (micro STBL) with 6 decimals
+- CW20 token contract: `wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d`
 - All scripts should use `set -euo pipefail` for error handling
 - Use `${KEYRING_FLAG}` and `${BECH32_FLAG}` variables in scripts
 
