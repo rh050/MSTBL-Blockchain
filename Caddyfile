@@ -1,3 +1,7 @@
+# MSTBL Blockchain - Full Caddy Configuration
+# Migrated from GCP: February 1, 2026
+# Updated: Frontend now local
+
 rpc.stbl.mstbl.com {
     reverse_proxy localhost:26657
 }
@@ -9,17 +13,23 @@ api.stbl.mstbl.com {
         reverse_proxy localhost:1317
     }
 
+    # Backend API endpoints
+    @backend path /api/treasury/* /api/purchase/*
+    handle @backend {
+        reverse_proxy localhost:3002
+    }
+
     reverse_proxy localhost:1317
 }
 
+grpc.stbl.mstbl.com {
+    reverse_proxy h2c://localhost:9090
+}
+
 mstbl.com {
-    reverse_proxy https://mstbl-prod-v1-329336973316.us-central1.run.app {
-        header_up Host {upstream_hostport}
-    }
+    reverse_proxy localhost:3000
 }
 
 app.stbl.mstbl.com {
-    reverse_proxy https://mstbl-prod-v1-329336973316.us-central1.run.app {
-        header_up Host {upstream_hostport}
-    }
+    reverse_proxy localhost:3000
 }

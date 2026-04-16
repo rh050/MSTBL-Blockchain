@@ -10,7 +10,7 @@
   "documentation": "README.md",
   "repository": "https://github.com/rh050/MSTBL-Blockchain",
   "logo_URIs": {
-    "png": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/frontend/public/MSTBL_LOGO.png",
+    "png": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/images/MSTBL_LOGO.png",
     "svg": ""
   },
   "apis": {
@@ -28,7 +28,7 @@
     ],
     "grpc": [
       {
-        "address": "34.57.32.80:9090",
+        "address": "grpc.stbl.mstbl.com:443",
         "provider": "MSTBL"
       }
     ]
@@ -37,7 +37,7 @@
   "fees": {
     "fee_tokens": [
       {
-        "denom": "ustbl",
+        "denom": "stake",
         "low_gas_price": 0.01,
         "average_gas_price": 0.025,
         "high_gas_price": 0.04
@@ -63,7 +63,7 @@
       "coinMinimalDenom": "cw20:wasm14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s0phg4d",
       "coinDecimals": 6,
       "coinGeckoId": "",
-      "coinImageUrl": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/frontend/public/MSTBL_LOGO.png"
+      "coinImageUrl": "https://raw.githubusercontent.com/rh050/MSTBL-Blockchain/main/images/MSTBL_LOGO.png"
     }
   ],
   "codebase": {
@@ -72,13 +72,13 @@
     "compatible_versions": [
       "v1.0.0"
     ],
-    "cosmos_sdk_version": "v0.45.0",
+    "cosmos_sdk_version": "v0.47.5",
     "consensus": {
-      "type": "tendermint",
-      "version": "v0.34.0"
+      "type": "cometbft",
+      "version": "v0.37.2"
     },
     "cosmwasm_enabled": true,
-    "cosmwasm_version": "v1.0.0"
+    "cosmwasm_version": "v0.45.0"
   },
   "params": {
     "unbonding_time": "1814400s",
